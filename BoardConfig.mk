@@ -115,6 +115,7 @@ BOARD_KERNEL_CMDLINE := \
 	msm_rtb.filter=0x237 \
 	androidboot.memcg=1 \
 	loop.max_part=7 \
+	pm.sleep_mode=1 \
 	swiotlb=2048 \
 	kpti=off
 
