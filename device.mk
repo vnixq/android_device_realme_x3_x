@@ -41,6 +41,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     AntHalService-Soong
 
+# AID/fs configs
+PRODUCT_PACKAGES += \
+    fs_config_files
+
 # Audio
 PRODUCT_PACKAGES += \
     vendor.qti.hardware.bluetooth_audio@2.0.vendor \
