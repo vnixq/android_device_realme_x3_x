@@ -1046,4 +1046,6 @@
          auto-brightness adjustment setting. -->
      <fraction name="config_autoBrightnessAdjustmentMaxGamma">300.0%</fraction>
 
+    <!-- Whether the new Auto Selection Network UI should be shown -->
+    <bool name="config_enableNewAutoSelectNetworkUI">true</bool>
 </resources>
