@@ -1,0 +1,1 @@
+allow init shell_exec:file { execute open read };
