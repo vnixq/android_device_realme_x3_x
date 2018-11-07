@@ -131,6 +131,8 @@ PRODUCT_PACKAGES += \
     NoCutoutOverlay \
     NotchBarKiller
 
+PRODUCT_ENFORCE_RRO_TARGETS := *
+
 # Partitions
 PRODUCT_BUILD_SUPER_PARTITION := false
 PRODUCT_EXTRA_VNDK_VERSIONS := 30
