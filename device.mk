@@ -79,6 +79,13 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.fingerprint.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/android.hardware.fingerprint.xml
 
+# Framework Detect
+PRODUCT_PACKAGES += \
+    libvndfwk_detect_jni.qti.vendor \
+    libqti_vndfwk_detect.vendor \
+    libvndfwk_detect_jni.qti \
+    libqti_vndfwk_detect
+
 # HIDL
 PRODUCT_PACKAGES += \
     android.hidl.base@1.0 \
