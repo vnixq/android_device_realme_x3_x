@@ -164,6 +164,7 @@ ro.lmk.kill_heaviest_task=true
 
 # Media
 debug.stagefright.omx_default_rank.sw-audio=16
+debug.stagefright.c2inputsurface=-1
 
 # NFC
 ro.hardware.nfc_nci=nqx.default
