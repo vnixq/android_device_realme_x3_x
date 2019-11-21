@@ -58,3 +58,6 @@
 
 # SecureElement
 /(vendor|odm)/bin/hw/android\.hardware\.secure_element@1\.0-service-disabled                            u:object_r:hal_secure_element_default_exec:s0
+
+# Persist
+/persist(/*)?                                                                                           u:object_r:mnt_vendor_file:s0
