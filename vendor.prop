@@ -75,11 +75,7 @@ ro.crypto.allow_encrypt_override=true
 ro.crypto.volume.filenames_mode=aes-256-cts
 
 # Dalvik
-dalvik.vm.heapmaxfree=16m
-dalvik.vm.heapminfree=4k
-dalvik.vm.heapsize=512m
-dalvik.vm.heapstartsize=16m
-dalvik.vm.heaptargetutilization=0.75
+dalvik.vm.dex2oat64.enabled=true
 
 # Display
 ro.hardware.egl=adreno
