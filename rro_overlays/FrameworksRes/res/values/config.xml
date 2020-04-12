@@ -1042,4 +1042,8 @@
     players. -->
     <integer name="config_safe_media_volume_index">17</integer>
 
+    <!-- The maximum range of gamma adjustment possible using the screen
+         auto-brightness adjustment setting. -->
+     <fraction name="config_autoBrightnessAdjustmentMaxGamma">300.0%</fraction>
+
 </resources>
