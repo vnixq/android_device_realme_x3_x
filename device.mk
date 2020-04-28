@@ -425,7 +425,7 @@ PRODUCT_SOONG_NAMESPACES += \
 # Sensors
 PRODUCT_PACKAGES += \
     android.frameworks.sensorservice@1.0.vendor \
-    android.hardware.sensors@2.0-service.multihal_x3 \
+    android.hardware.sensors@2.1-service.multihal_x3 \
     libsensorndkbridge
 
 PRODUCT_COPY_FILES += \
