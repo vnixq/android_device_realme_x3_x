@@ -38,6 +38,9 @@ debug.sf.enable_transaction_tracing=false
 ro.surface_flinger.max_frame_buffer_acquired_buffers=3
 ro.surface_flinger.force_hwc_copy_for_virtual_displays=true
 
+# Incremental FS
+ro.incremental.enable=1
+
 # Radio
 persist.vendor.radio.data_con_rprt=1
 persist.vendor.radio.process_sups_ind=1
