@@ -66,6 +66,10 @@ on init
     #Disable UFS clock gating
     write /sys/bus/platform/devices/1d84000.ufshc/clkgate_enable 0
 
+    # Report max frequency to unity tasks.
+    write /proc/sys/kernel/sched_lib_name "UnityMain,libunity.so"
+    write /proc/sys/kernel/sched_lib_mask_force 255
+
 on post-fs
     chmod 0755 /sys/kernel/debug/tracing
     mkdir /mnt/vendor/persist/wlan 0777 system system
