@@ -130,7 +130,7 @@ PRODUCT_PACKAGES += \
 
 # Configstore
 PRODUCT_PACKAGES += \
-    android.hardware.configstore@1.1-service
+    disable_configstore
 
 # DebugFS
 PRODUCT_SET_DEBUGFS_RESTRICTIONS := true
