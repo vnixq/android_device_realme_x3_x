@@ -931,3 +931,19 @@ service vendor.audio-hal /vendor/bin/hw/android.hardware.audio.service
     ioprio rt 4
     writepid /dev/cpuset/foreground/tasks /dev/stune/foreground/tasks
     onrestart restart audioserver
+
+service health-hal-2-1 /vendor/bin/hw/android.hardware.health@2.1-service
+    override
+    class hal charger
+    user system
+    group system
+    capabilities WAKE_ALARM BLOCK_SUSPEND
+    file /dev/kmsg w
+    disabled
+
+service health-hal-2-1.x3 /vendor/bin/hw/android.hardware.health@2.1-service.x3
+    class hal charger
+    user system
+    group system
+    capabilities WAKE_ALARM BLOCK_SUSPEND
+    file /dev/kmsg w
