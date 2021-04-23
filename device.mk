@@ -44,10 +44,6 @@ PRODUCT_PACKAGES += \
     AntHalService-Soong \
     com.dsi.ant@1.0.vendor
 
-# AID/fs configs
-PRODUCT_PACKAGES += \
-    fs_config_files
-
 # Audio
 PRODUCT_PACKAGES += \
     vendor.qti.hardware.bluetooth_audio@2.0.vendor \
