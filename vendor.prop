@@ -134,7 +134,6 @@ ro.vendor.gsi.build.flavor=none
 # Graphics
 debug.egl.hw=0
 debug.mdpcomp.logs=0
-debug.sf.enable_egl_image_tracker=1
 debug.sf.hw=0
 debug.sf.treat_170m_as_sRGB=1
 debug.sf.latch_unsignaled=0
