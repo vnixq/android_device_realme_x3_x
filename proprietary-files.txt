@@ -1730,16 +1730,6 @@ odm/lib64/oplus.sensors.ssc.so:vendor/lib64/oplus.sensors.ssc.so|314ad80354c6588
 vendor/lib/sensors.ssc.so|5eafd538505bdc9c1712f8e4c30f7ce1dbd2eb1f
 vendor/lib64/sensors.ssc.so|7808cd426980171032cb06d9d810b0c4962b9a05
 
-# Sensor-calibrate
--system_ext/framework/vendor.qti.hardware.sensorscalibrate-V1.0-java.jar
-vendor/bin/hw/vendor.qti.hardware.sensorscalibrate@1.0-service
-vendor/etc/init/vendor.qti.hardware.sensorscalibrate@1.0-service.rc
-vendor/etc/permissions/vendor-qti-hardware-sensorscalibrate.xml
-vendor/lib/hw/vendor.qti.hardware.sensorscalibrate@1.0-impl.so
-vendor/lib/vendor.qti.hardware.sensorscalibrate@1.0.so
-vendor/lib64/hw/vendor.qti.hardware.sensorscalibrate@1.0-impl.so
-vendor/lib64/vendor.qti.hardware.sensorscalibrate@1.0.so
-
 # Sensor-configs
 odm/etc/sensor/sensor_config.json
 vendor/etc/sensors/config/ak991x_dri_0.json
