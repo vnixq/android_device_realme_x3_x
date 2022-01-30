@@ -43,6 +43,10 @@ debug.sf.enable_transaction_tracing=false
 # Logs
 persist.log.tag.OpenGLRenderer=S
 
+# HWUI
+debug.hwui.use_hint_manager=true
+debug.hwui.target_cpu_time_percent=30
+
 # Media
 media.stagefright.thumbnail.prefer_hw_codecs=true
 persist.mm.enable.prefetch=true
