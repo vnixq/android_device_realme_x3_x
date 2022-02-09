@@ -248,5 +248,18 @@ PRODUCT_PACKAGES += \
 
 # WiFi
 PRODUCT_PACKAGES += \
+    vendor.qti.hardware.wifi.hostapd@1.0.vendor \
+    vendor.qti.hardware.wifi.hostapd@1.1.vendor \
+    vendor.qti.hardware.wifi.supplicant@2.0.vendor \
+    vendor.qti.hardware.wifi.supplicant@2.1.vendor \
+    android.hardware.wifi@1.0-service \
+    android.hardware.wifi@1.5.vendor \
     TetheringConfigOverlay \
-    WifiOverlay
+    wpa_supplicant.conf \
+    libwifi-hal-ctrl \
+    libwifi-hal-qcom \
+    libwpa_client \
+    wpa_supplicant \
+    WifiOverlay \
+    hostapd \
+    wpa_cli
