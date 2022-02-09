@@ -193,6 +193,14 @@ PRODUCT_PACKAGES += \
     android.hardware.gnss@1.1.vendor \
     android.hardware.gnss@2.1.vendor
 
+# Keymaster
+PRODUCT_PACKAGES += \
+    android.hardware.keymaster@4.1.vendor \
+    android.hardware.keymaster@4.0-service
+
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.vendor.keymaster.version=v4
+
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
