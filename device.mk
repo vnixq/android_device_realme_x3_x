@@ -93,7 +93,17 @@ PRODUCT_PACKAGES += \
     fstab.qcom \
     init.recovery.qcom.rc \
     init.set_baseband.sh \
-    init.safailnet.rc
+    init.safailnet.rc \
+    init.class_main.sh \
+    init.qcom.early_boot.sh \
+    init.qcom.post_boot.sh \
+    init.qcom.usb.rc \
+    init.qcom.usb.sh \
+    init.logcat.rc \
+    init.qcom.rc \
+    init.qcom.sh \
+    init.target.rc \
+    ueventd.qcom.rc
 
 # Keylayout
 PRODUCT_COPY_FILES += \
