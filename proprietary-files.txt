@@ -623,7 +623,6 @@ odm/lib64/libcdm_protos.so
 odm/lib64/libhwconfigurationutil.so
 odm/lib64/libml_util.so
 odm/lib64/libmpbase.so
-odm/lib64/liboplus_service.so
 odm/lib64/libsnpe_dsp_domains_v2.so
 odm/lib64/libsnpe_loader.so
 odm/lib64/libsnpeml.so
@@ -1849,6 +1848,8 @@ vendor/lib64/libsensorslog.so
 vendor/lib64/libssc.so
 vendor/lib64/libssc_default_listener.so
 vendor/lib64/sensors.ssc.so
+odm/bin/oplus_sensor_fb
+odm/lib64/liboplus_service.so
 
 # Snapdragon Computer Vision Engine
 vendor/lib/libfastcvdsp_stub.so
