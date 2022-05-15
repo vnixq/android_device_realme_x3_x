@@ -298,6 +298,7 @@ DEVICE_PACKAGE_OVERLAYS += \
 PRODUCT_ENFORCE_RRO_TARGETS := *
 PRODUCT_PACKAGES += \
     SettingsProviderRes \
+    SimpleDeviceConfigCommon \
     FrameworksRes \
     CarrierConfigRes \
     TetheringConfigRes \
