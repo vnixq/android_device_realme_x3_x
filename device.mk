@@ -105,6 +105,7 @@ PRODUCT_PACKAGES += \
     libcamera2ndk_vendor \
     libcamera_metadata \
     libprotobuf-cpp-full \
+    libgui_vendor \
     librsjni
 
 PRODUCT_COPY_FILES += \
