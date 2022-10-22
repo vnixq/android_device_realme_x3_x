@@ -101,6 +101,11 @@ on property:sys.usb.ffs.ready=1 && property:sys.usb.config=rndis,none,adb && pro
     write /config/usb_gadget/g1/idVendor 0x22D9
     write /config/usb_gadget/g1/idProduct 0x2766
 
+service oplus-wifi-sh /odm/bin/init.oplus.wifi.sh
+    class core
+    user root
+    oneshot
+
 service oplus_sensor_fb /odm/bin/oplus_sensor_fb
     user system
     group system
