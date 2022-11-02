@@ -4,8 +4,6 @@ ro.bionic.2nd_cpu_variant=cortex-a55
 
 # Camera
 media.settings.xml=/vendor/etc/media_profiles_vendor.xml
-persist.vendor.camera.privapp.list=com.android.camera,com.oppo.camera,org.codeaurora.snapcam,org.lineageos.snap
-vendor.camera.aux.packagelist=com.android.camera,com.oppo.camera,org.codeaurora.snapcam
 
 # Charger
 ro.charger.enable_suspend=true
