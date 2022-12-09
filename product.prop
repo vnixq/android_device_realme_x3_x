@@ -38,6 +38,12 @@ ro.surface_flinger.force_hwc_copy_for_virtual_displays=true
 # Incremental FS
 ro.incremental.enable=1
 
+# Battery Saving
+ro.vold.umsdirtyratio=20 
+ro.ril.disable.power.collapse=0 
+power.saving.mode=1
+pm.sleep_mode=1
+
 # Radio
 persist.vendor.radio.data_con_rprt=1
 persist.vendor.radio.process_sups_ind=1
