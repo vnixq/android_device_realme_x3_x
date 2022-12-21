@@ -579,6 +579,8 @@ vendor/etc/camera/tonemap/tonemap_lut_9
 vendor/firmware/CAMERA_ICP.elf
 
 # Camera
+odm/bin/vl53l1_daemon_main
+odm/lib64/libvl53l1_daemon.so
 odm/lib64/libAlgoInterface.so
 odm/lib64/libAlgoProcess.so
 odm/lib64/libAncHumBokeh.so
