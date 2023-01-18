@@ -716,14 +716,6 @@
 	<fqname>@1.1::ISurfaceFlingerConfigs/default</fqname>
     </hal>
     <hal format="hidl">
-       <name>android.hardware.power.stats</name>
-       <transport>hwbinder</transport>
-       <interface>
-           <name>IPowerStats</name>
-           <instance>default</instance>
-       </interface>
-    </hal>
-    <hal format="hidl">
         <name>android.hardware.light</name>
         <transport>hwbinder</transport>
         <version>2.0</version>
