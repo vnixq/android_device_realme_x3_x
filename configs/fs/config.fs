@@ -25,18 +25,6 @@ value:2908
 [AID_VENDOR_QTR]
 value:2909
 
-[vendor/bin/wcnss_filter]
-mode: 0755
-user: AID_BLUETOOTH
-group: AID_BLUETOOTH
-caps: BLOCK_SUSPEND
-
-[system/vendor/bin/wcnss_filter]
-mode: 0755
-user: AID_BLUETOOTH
-group: AID_BLUETOOTH
-caps: BLOCK_SUSPEND
-
 [vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti]
 mode: 0755
 user: AID_BLUETOOTH
@@ -193,38 +181,8 @@ user: AID_SYSTEM
 group: AID_SYSTEM
 caps: NET_BIND_SERVICE
 
-[firmware/]
-mode: 0771
-user: AID_SYSTEM
-group: AID_SYSTEM
-caps: 0
-
-[firmware/image/*]
-mode: 0771
-user: AID_SYSTEM
-group: AID_SYSTEM
-caps: 0
-
 [vendor/firmware_mnt/image/*]
 mode: 0771
 user: AID_SYSTEM
 group: AID_SYSTEM
-caps: 0
-
-[vendor/bt_firmware/]
-mode: 0771
-user: AID_SYSTEM
-group: AID_SYSTEM
-caps: 0
-
-[persist/]
-mode: 0771
-user: AID_SYSTEM
-group: AID_SYSTEM
-caps: 0
-
-[vendor/dsp/]
-mode: 0771
-user: AID_MEDIA
-group: AID_MEDIA
 caps: 0
