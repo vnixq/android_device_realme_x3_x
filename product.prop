@@ -47,3 +47,4 @@ pm.sleep_mode=1
 # Radio
 persist.vendor.radio.data_con_rprt=1
 persist.vendor.radio.process_sups_ind=1
+persist.vendor.radio.add_power_save=1
