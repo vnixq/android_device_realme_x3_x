@@ -27,6 +27,10 @@
 # ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #
 
+# Store soc_id in ro.vendor.qti.soc_id
+soc_id=cat /sys/devices/soc0/soc_id 2> /dev/null
+setprop ro.vendor.qti.soc_id $soc_id
+
 #For drm based display driver
 echo -1 >  /sys/module/drm/parameters/vblankoffdelay
 
