@@ -171,6 +171,12 @@ service vendor.sec_nvm /vendor/bin/sec_nvm
     user system
     group system
 
+service adsprpcd /vendor/bin/adsprpcd
+   class main
+   user media
+   group media
+   disabled
+
 service vendor.thermal-engine /vendor/bin/thermal-engine
    class main
    user root
