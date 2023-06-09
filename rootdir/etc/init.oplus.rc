@@ -166,3 +166,10 @@ service vl53l1_daemon_main /odm/bin/vl53l1_daemon_main
     user root
     group root
     socket vl53l1_daemon stream 660 root system
+
+service vendor.adsprpcd /vendor/bin/adsprpcd
+    override
+    class main
+    user system
+    group media
+    disabled
