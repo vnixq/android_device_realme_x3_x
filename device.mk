@@ -124,6 +124,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     disable_configstore
 
+# Dolby
+PRODUCT_PACKAGES += \
+    DolbyManager
+
 # DebugFS
 PRODUCT_SET_DEBUGFS_RESTRICTIONS := true
 
