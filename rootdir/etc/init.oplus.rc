@@ -43,6 +43,9 @@ on boot
     chmod 0666 /dev/audio_ultrasound
     chmod 0666 /dev/sensor_ultrasound
 
+    # Charger
+    chown system system /sys/class/power_supply/battery/mmi_charging_enable
+
 on property:ro.boot.prjname=*
     # Display
     setprop ro.separate.soft ${ro.boot.prjname}
