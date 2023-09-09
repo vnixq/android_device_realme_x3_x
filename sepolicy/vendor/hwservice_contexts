@@ -22,5 +22,9 @@ vendor.oplus.hardware.ims::IOplusImsRadio             u:object_r:hal_telephony_h
 # CryptoEng
 vendor.oplus.hardware.cryptoeng::ICryptoeng                                            u:object_r:hal_cryptoeng_hwservice:s0
 
+# Dolby
+vendor.dolby.hardware.dms::IDms                                              u:object_r:hal_dms_hwservice:s0
+vendor.dolby_v3_6.hardware.dms360::IDms                                      u:object_r:hal_dms_hwservice:s0
+
 # Performance
 vendor.oplus.hardware.performance::IPerformance                              u:object_r:hal_fingerprint_hwservice:s0
