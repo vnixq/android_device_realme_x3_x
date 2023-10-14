@@ -102,6 +102,10 @@ PRODUCT_PACKAGES += \
     PresencePolling \
     RcsService
 
+# Recovery
+PRODUCT_PACKAGES += \
+    librecovery_updater_qcom
+
 # Shipping API level
 PRODUCT_SHIPPING_API_LEVEL := 29
 
