@@ -205,7 +205,7 @@
       "Values": [
         "30",
         "10",
-        "1"
+        "0"
       ],
       "ResetOnInit": true
     },
@@ -1127,7 +1127,7 @@
       "PowerHint": "DISABLE_TA_BOOST",
       "Node": "TASchedtuneBoost",
       "Duration": 0,
-      "Value": "1"
+      "Value": "0"
     },
     {
       "PowerHint": "DISPLAY_IDLE",
@@ -1150,6 +1150,12 @@
       "Node": "CPULittleClusterMinFreq",
       "Duration": 0,
       "Value": "300000"
+    },
+    {
+      "PowerHint": "DISPLAY_INACTIVE",
+      "Node": "TASchedtuneBoost",
+      "Duration": 0,
+      "Value": "0"
     }
   ]
 }
