@@ -8,7 +8,7 @@
 $(call inherit-product, vendor/realme/x3/x3-vendor.mk)
 
 # Inherit GSI keys
-$(call inherit-product, $(SRC_TARGET_DIR)/product/gsi_keys.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/developer_gsi_keys.mk)
 
 # Inherit updatable APEX
 OVERRIDE_PRODUCT_COMPRESSED_APEX := false
@@ -21,10 +21,6 @@ PRODUCT_PACKAGES += \
 # Bluetooth
 PRODUCT_PACKAGE_OVERLAYS += \
     vendor/qcom/opensource/commonsys-intf/bluetooth/overlay/qva
-
-# Camera
-PRODUCT_PACKAGES += \
-    Snap
 
 # Display
 PRODUCT_AAPT_CONFIG := normal
@@ -71,7 +67,6 @@ PRODUCT_COPY_FILES += \
 # NFC
 PRODUCT_PACKAGES += \
     com.android.nfc_extras \
-    com.gsma.services.nfc \
     NfcNci \
     SecureElement \
     Tag
