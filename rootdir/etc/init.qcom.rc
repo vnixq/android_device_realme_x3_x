@@ -498,3 +498,12 @@ on property:vendor.oppo.wifi.reload.wlandriver=*
 on property:vendor.oppo.wifi.driver.insmod=*
     setprop oppo.wifi.driver.insmod ${vendor.oppo.wifi.driver.insmod}
 
+service vendor.qti.hardware.display.composer /vendor/bin/hw/vendor.qti.hardware.display.composer-service
+    override
+    class hal animation
+    user system
+    group graphics drmrpc
+    capabilities SYS_NICE
+    onrestart restart surfaceflinger
+    socket pps stream 0660 system system
+    task_profiles ProcessCapacityHigh HighPerformance
