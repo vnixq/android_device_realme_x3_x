@@ -105,7 +105,6 @@ BOARD_KERNEL_CMDLINE := \
 	androidboot.usbcontroller=a600000.dwc \
 	earlycon=msm_geni_serial,0xa90000 \
 	androidboot.selinux=permissive \
-	androidboot.console=ttyMSM0 \
 	lpm_levels.sleep_disabled=1 \
 	androidboot.hardware=qcom \
         console=ttyMSM0,115200n8 \
