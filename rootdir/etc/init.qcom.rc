@@ -51,8 +51,6 @@ on early-init
 
     chown root system /dev/kmsg
     chmod 0620 /dev/kmsg
-    # Load WIGIG platform driver
-    exec u:r:vendor_modprobe:s0 -- /vendor/bin/modprobe -a -d /vendor/lib/modules msm_11ad_proxy
 
 on init
 
@@ -69,6 +67,7 @@ on init
 
 on post-fs
     chmod 0755 /sys/kernel/debug/tracing
+    mkdir /mnt/vendor/persist/wlan 0777 system system
 
 on early-boot
     # set RLIMIT_MEMLOCK to 64MB
@@ -84,16 +83,6 @@ on early-boot
 
     chown system system /mnt/vendor/persist/data/pfm/licenses
     chmod 0775 /mnt/vendor/persist/data/pfm/licenses
-    chown system system /mnt/vendor/persist/data/pfm/licenses/store_0
-    chmod 0664 /mnt/vendor/persist/data/pfm/licenses/store_0
-    chown system system /mnt/vendor/persist/data/pfm/licenses/store_1
-    chmod 0664 /mnt/vendor/persist/data/pfm/licenses/store_1
-    chown system system /mnt/vendor/persist/data/pfm/licenses/store_2
-    chmod 0664 /mnt/vendor/persist/data/pfm/licenses/store_2
-    chown system system /mnt/vendor/persist/data/pfm/licenses/store_3
-    chmod 0664 /mnt/vendor/persist/data/pfm/licenses/store_3
-    chown system system /mnt/vendor/persist/data/pfm/licenses/store_4
-    chmod 0664 /mnt/vendor/persist/data/pfm/licenses/store_4
 
 on boot
     chown bluetooth bluetooth /sys/module/bluetooth_power/parameters/power
@@ -106,6 +95,8 @@ on boot
     chown bluetooth bluetooth /sys/module/hci_smd/parameters/hcismd_set
     chown system system /sys/module/msm_core/parameters/polling_interval
     chown system system /sys/module/msm_core/parameters/disabled
+    chown system system /sys/kernel/debug/msm_core/enable
+    chown system system /sys/kernel/debug/msm_core/ptable
     chown system system /sys/kernel/boot_slpi/ssr
     chown system system /sys/module/radio_iris_transport/parameters/fmsmd_set
     chmod 0660 /sys/module/bluetooth_power/parameters/power
@@ -122,6 +113,7 @@ on boot
 
     chmod 0660 /dev/ttyHS2
     chown bluetooth bluetooth /dev/ttyHS2
+
 
     chown bluetooth net_bt /sys/class/rfkill/rfkill0/device/extldo
     chmod 0660 /sys/class/rfkill/rfkill0/device/extldo
@@ -148,6 +140,9 @@ on boot
 
     setprop ro.telephony.call_ring.multiple false
 
+    #enable camera read sensors data
+    setprop persist.camera.gyro.disable 0
+
     #Remove SUID bit for iproute2 ip tool
     chmod 0755 /system/bin/ip
 
@@ -166,7 +161,7 @@ on boot
 
     # Set the console loglevel to < KERN_WARN
     # Set the default message loglevel to KERN_INFO
-    write /proc/sys/kernel/printk "4 6 1 7"
+    write /proc/sys/kernel/printk "6 6 1 7"
 
     # Allow access for CCID command/response timeout configuration
     chown system system /sys/module/ccid_bridge/parameters/bulk_msg_timeout
@@ -174,7 +169,9 @@ on boot
     # bond0 used by FST Manager
     chown wifi wifi /sys/class/net/bond0/bonding/queue_id
 
-    # Allow access to emmc dload sysfs node
+    # Allow access to emmc rawdump block partition and dload sysfs node
+    chown root system /dev/block/bootdevice/by-name/rawdump
+    chmod 0660 /dev/block/bootdevice/by-name/rawdump
     chown root system /sys/kernel/dload/emmc_dload
     chmod 0660 /sys/kernel/dload/emmc_dload
     chown root system /dev/block/bootdevice/by-name/ramdump
@@ -204,15 +201,21 @@ on boot
 
     # Create vpp directory
     mkdir /mnt/vendor/persist/vpp 0770 media media
-
+    
+    chown system system /sys/devices/platform/vendor/vendor:infrared_pl/infrared_power_enable
+    chmod 0666 /sys/devices/platform/vendor/vendor:infrared_pl/infrared_power_enable
 
     # Create hvdcp_opti directory
     mkdir /mnt/vendor/persist/hvdcp_opti 0770 root system
+   
+    setprop persist.vendor.chg.max_volt_mv 5000
+    setprop persist.vendor.qg.soc_gain_chg_high 0
+    setprop persist.vendor.qg.soc_gain_chg_med 0
 
     # limit discard size to 128MB in order to avoid long IO latency
     write /sys/block/sda/queue/discard_max_bytes 134217728
 
-# msm specific files that need to be created on /data
+    # msm specific files that need to be created on /data
 on post-fs-data
     mkdir /data/vendor/misc 01771 system system
 
@@ -225,9 +228,6 @@ on post-fs-data
     # Change lm related dirs
     mkdir /data/vendor/lm 0700 root root
 
-    # Create directory used by powermodule
-    mkdir /data/vendor/pwr 0700 root root
-
     # Create directory used by media clients
     mkdir /data/vendor/media 0770 mediacodec media
 
@@ -238,8 +238,10 @@ on post-fs-data
     mkdir /data/vendor/qtee 0770 system system
 
     #Create folder of camera
-    mkdir /data/vendor/camera 0770 camera camera
+    mkdir /data/vendor/camera 0777 camera camera
 
+    #Create folder of slogan
+    mkdir /data/vendor/camera/slogan 0777 system system
 
     #Create directory for tftp
     mkdir /data/vendor/tombstones 0771 system system
@@ -299,6 +301,7 @@ on post-fs-data
     #Create the symlink to qcn wpa_supplicant folder for ar6000 wpa_supplicant
     #symlink /data/misc/wifi/wpa_supplicant /data/system/wpa_supplicant
 
+
     #Create directories for Location services
     mkdir /data/vendor/location 0770 gps gps
     mkdir /data/vendor/location/mq 0770 gps gps
@@ -306,7 +309,6 @@ on post-fs-data
     mkdir /dev/socket/location 0770 gps gps
     mkdir /dev/socket/location/mq 0770 gps gps
     mkdir /dev/socket/location/xtra 0770 gps gps
-    mkdir /dev/socket/location/dgnss 0770 gps gps
 
     #Create directories for wifihal services
     mkdir /dev/socket/wifihal 0770 wifi wifi
@@ -415,6 +417,7 @@ service vendor.ss_ramdump /system/vendor/bin/subsystem_ramdump
     ioprio rt 4
     disabled
 
+
 on property:ro.vendor.iocgrp.config=1
     mkdir /dev/blkio
     mount cgroup none /dev/blkio blkio
@@ -458,8 +461,6 @@ on property:persist.vendor.sys.rawdump_copy=0
 
 on property:sys.boot_completed=1
     write /dev/kmsg "Boot completed "
-    #Enable UFS clock scaling back
-    write /sys/bus/platform/devices/1d84000.ufshc/clkscale_enable 1
     #Reset read ahead for dm-0 and dm-1 to 512kb
     write /sys/block/dm-0/queue/read_ahead_kb 512
     write /sys/block/dm-1/queue/read_ahead_kb 512
@@ -504,6 +505,15 @@ service qcom-c_main-sh /vendor/bin/init.class_main.sh
 on property:vold.decrypt=trigger_restart_framework
     start qcom-c_main-sh
     start wcnss-service
+
+on property:ro.crypto.state=unencrypted
+    start bspFwUpdate
+
+on property:ro.crypto.state=unsupported
+    start bspFwUpdate
+
+on property:persist.env.fastdorm.enabled=true
+    setprop persist.radio.data_no_toggle 1
 
 service vendor.qrtr-ns /vendor/bin/qrtr-ns -f
     class core
@@ -682,6 +692,12 @@ service loc_launcher /system/vendor/bin/loc_launcher
     user gps
     group gps
 
+on property:drmdiag.load=1
+    start drmdiag
+
+on property:drmdiag.load=0
+    stop drmdiag
+
 service qcom-sh /vendor/bin/init.qcom.sh
     class late_start
     user root
@@ -736,6 +752,18 @@ service hostapd_fst /vendor/bin/hw/hostapd -dd -g /data/vendor/wifi/hostapd/glob
     disabled
     oneshot
 
+service ims_regmanager /system/vendor/bin/exe-ims-regmanagerprocessnative
+    class late_start
+    group net_bt_admin inet radio wifi
+    disabled
+
+on property:persist.ims.regmanager.mode=1
+    start ims_regmanager
+
+on property:ro.data.large_tcp_window_size=true
+    # Adjust socket buffer to enlarge TCP receive window for high bandwidth (e.g. DO-RevB)
+    write /proc/sys/net/ipv4/tcp_adv_win_scale  2
+
 service battery_monitor /system/bin/battery_monitor
     user system
     group system
@@ -773,6 +801,32 @@ service vendor.ssr_diag /system/vendor/bin/ssr_diag
     user system
     group system
     disabled
+
+service hvdcp /system/bin/hvdcp
+    class core
+    user root
+    disabled
+
+on property:persist.usb.hvdcp.detect=true
+    start hvdcp
+
+on property:persist.usb.hvdcp.detect=false
+    stop hvdcp
+
+service charger_monitor /system/bin/charger_monitor
+    user root
+    group root
+    disabled
+
+service qbcharger /charger -m 1
+    disabled
+    oneshot
+
+on property:sys.qbcharger.enable=true
+    start qbcharger
+
+on property:sys.qbcharger.enable=false
+    stop qbcharger
 
 service diag_mdlog_start /system/vendor/bin/diag_mdlog
     class late_start
@@ -934,3 +988,29 @@ service health-hal-2-1.x3 /vendor/bin/hw/android.hardware.health@2.1-service.x3
     group system
     capabilities WAKE_ALARM BLOCK_SUSPEND
     file /dev/kmsg w
+
+on property:ro.vendor.oppo.radio.multisim.config=*
+    setprop persist.radio.multisim.config ${ro.vendor.oppo.radio.multisim.config}
+
+on post-fs-data
+    chmod 0666 /mnt/vendor/persist/wlan/WCNSS_qcom_cfg.ini
+
+# To rename ini_temp.txt into WCNSS_qcom_cfg.ini
+on property:oplus.wifi.iniromupdate=*
+    copy /mnt/vendor/persist/ini_temp.txt /mnt/vendor/persist/wlan/WCNSS_qcom_cfg.ini
+    chmod 0666 /mnt/vendor/persist/wlan/WCNSS_qcom_cfg.ini
+
+# To enable /mnt/vendor/persist folder access right for ini romupdate feature
+on property:oplus.wifi.enablepersistaccess=*
+    chmod 0777 /mnt/vendor/persist
+
+# To restore /mnt/vendor/persist folder access right for ini romupdate feature
+on property:oplus.wifi.restorepersistaccess=*
+    chmod 0771 /mnt/vendor/persist
+
+on property:vendor.oppo.wifi.reload.wlandriver=*
+    setprop oppo.wifi.reload.wlandriver ${vendor.oppo.wifi.reload.wlandriver}
+
+on property:vendor.oppo.wifi.driver.insmod=*
+    setprop oppo.wifi.driver.insmod ${vendor.oppo.wifi.driver.insmod}
+
