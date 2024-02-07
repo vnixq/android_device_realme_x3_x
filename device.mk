@@ -133,8 +133,13 @@ PRODUCT_COPY_FILES += \
     system/core/libprocessgroup/profiles/task_profiles_30.json:$(TARGET_COPY_OUT_VENDOR)/etc/task_profiles.json
     
 # Dolby
-PRODUCT_PACKAGES += \
-    DolbyManager
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/dolby/dax-default.xml:$(TARGET_COPY_OUT_VENDOR)/etc/dolby/dax-default.xml
+
+TARGET_EXCLUDES_AUDIOFX := true
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/sysconfig/preinstalled-packages-platform-realme-product.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/preinstalled-packages-platform-realme-product.xml
 
 # DebugFS
 PRODUCT_SET_DEBUGFS_RESTRICTIONS := true

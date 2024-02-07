@@ -10,4 +10,3 @@ vendor.oplus.hardware.performance::IPerformance                              u:o
 vendor.oplus.hardware.radio.oplusradio::IOplusRadio                          u:object_r:hal_telephony_hwservice:s0
 vendor.oplus.hardware.radio.oplusappradio::IOplusAppRadio                    u:object_r:hal_telephony_hwservice:s0
 vendor.dolby.hardware.dms::IDms                                              u:object_r:hal_dms_hwservice:s0
-vendor.dolby_v3_6.hardware.dms360::IDms                                      u:object_r:hal_dms_hwservice:s0

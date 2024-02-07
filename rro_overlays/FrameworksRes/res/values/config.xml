@@ -959,6 +959,8 @@
         <item>"/system/framework/framework.jar"</item>
         <item>"/system/framework/services.jar"</item>
         <item>"/system/framework/ext.jar"</item>
+        <item>"/system_ext/priv-app/MotoDolbyDax3/MotoDolbyDax3.apk"</item>
+        <item>"/system_ext/priv-app/daxService/daxService.apk"</item> 
         <item>"/system/lib64/libEGL.so"</item>
         <item>"/system/lib64/libhwui.so"</item>
         <item>"/system_ext/priv-app/SystemUIGoogle/SystemUIGoogle.apk"</item>
