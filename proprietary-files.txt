@@ -96,7 +96,9 @@ odm/lib/rfsa/adsp/libktvreverb.so
 odm/lib/rfsa/adsp/libktvvolume.so
 
 # Audio extensions
+odm/etc/audio_platform_info.xml
 odm/firmware/awinic_haptic_params.bin
+vendor/etc/audio_effects.xml
 vendor/lib/liba2dpoffload.so
 vendor/lib/libbatterylistener.so
 vendor/lib/libcomprcapture.so
@@ -137,10 +139,7 @@ vendor/etc/acdbdata/QRD/QRD_Speaker_cal.acdb
 vendor/etc/acdbdata/QRD/QRD_workspaceFile.qwsp
 
 # Audio-configs
-odm/etc/mixer_paths.xml
 odm/etc/audio_platform_info.xml
-odm/etc/sound_trigger_mixer_paths.xml
-odm/etc/sound_trigger_platform_info.xml
 vendor/etc/audio_effects.xml
 
 # Audio
@@ -625,6 +624,7 @@ odm/lib64/libcdm_protos.so
 odm/lib64/libhwconfigurationutil.so
 odm/lib64/libml_util.so
 odm/lib64/libmpbase.so
+odm/lib64/liboplus_service.so
 odm/lib64/libsnpe_dsp_domains_v2.so
 odm/lib64/libsnpe_loader.so
 odm/lib64/libsnpeml.so
@@ -908,16 +908,25 @@ vendor/etc/init/android.hardware.memtrack@1.0-service.rc
 vendor/etc/init/vendor.qti.hardware.display.allocator-service.rc
 vendor/lib64/android.hardware.graphics.composer@2.1-resources.so
 vendor/lib64/android.hardware.graphics.composer@2.2-resources.so
+vendor/lib64/hw/android.hardware.graphics.mapper@3.0-impl-qti-display.so
+vendor/lib64/hw/android.hardware.graphics.mapper@4.0-impl-qti-display.so
 vendor/lib64/hw/android.hardware.memtrack@1.0-impl.so
 vendor/lib64/hw/gralloc.default.so
+vendor/lib64/libdisplaydebug.so
 vendor/lib64/libdisplayqos.so
 vendor/lib64/libdpps.so
 vendor/lib64/libdrm.so
 vendor/lib64/libdrmutils.so
+vendor/lib64/libgpu_tonemapper.so
+vendor/lib64/libgralloccore.so
+vendor/lib64/libgrallocutils.so
+vendor/lib64/libqdutils.so
+vendor/lib64/libqservice.so
 vendor/lib64/libsdm-colormgr-algo.so
 vendor/lib64/libsdm-disp-vndapis.so
 vendor/lib64/libsdmcore.so
 vendor/lib64/libsdmextension.so
+vendor/lib64/libsdmutils.so
 vendor/lib64/vendor.display.config@1.0.so
 vendor/lib64/vendor.display.config@1.1.so
 vendor/lib64/vendor.display.config@1.10.so
@@ -1205,18 +1214,13 @@ vendor/lib64/vendor.qti.hardware.factory@1.1.so
 vendor/bin/hw/android.hardware.health@2.1-service:vendor/bin/hw/android.hardware.health@2.1-service.x3
 
 # IMS system
--system_ext/app/QtiTelephony/QtiTelephony.apk
 -system_ext/app/ImsRcsService/ImsRcsService.apk
 -system_ext/app/uceShimService/uceShimService.apk
 -system_ext/priv-app/ims/ims.apk
-system_ext/etc/permissions/telephony_system-ext_privapp-permissions-qti.xml
 system_ext/etc/permissions/vendor.qti.ims.rcsservice.xml
-system_ext/etc/sysconfig/qti_telephony_system_packages_config.xml
-system_ext/etc/sysconfig/qti_whitelist_system_ext.xml
 system_ext/framework/vendor.qti.ims.factory-V1.0-java.jar
 system_ext/framework/vendor.qti.ims.factory-V1.1-java.jar
 system_ext/framework/vendor.qti.ims.factory-V2.0-java.jar
-system_ext/framework/oplus-ims-ext.jar
 system_ext/lib64/lib-imsvideocodec.so
 system_ext/lib64/lib-imsvt.so
 system_ext/lib64/lib-imsvtextutils.so
@@ -1242,7 +1246,6 @@ vendor/lib64/com.qualcomm.qti.imscmservice@2.2.so
 vendor/lib64/com.qualcomm.qti.uceservice@2.0.so
 vendor/lib64/com.qualcomm.qti.uceservice@2.1.so
 vendor/lib64/com.qualcomm.qti.uceservice@2.2.so
-vendor/lib64/com.qualcomm.qti.uceservice@2.3.so
 vendor/lib64/lib-imscmservice.so
 vendor/lib64/lib-imsdpl.so
 vendor/lib64/lib-imsqimf.so
@@ -1273,8 +1276,6 @@ vendor/lib64/vendor.qti.ims.rcsconfig@2.0.so
 vendor/lib64/vendor.qti.ims.rcsconfig@2.1.so
 vendor/lib64/vendor.qti.imsrtpservice@3.0-service-Impl.so
 vendor/lib64/vendor.qti.imsrtpservice@3.0.so
-vendor/lib64/com.qualcomm.qti.imscmservice@1.0.so
-vendor/lib64/vendor.qti.data.mwqem@1.0.so
 
 # IO prefetcher
 vendor/bin/hw/vendor.qti.hardware.iop@2.0-service
@@ -1584,8 +1585,6 @@ system_ext/framework/qcrilhook.jar
 system_ext/framework/qti-telephony-common.jar
 
 # RIL
-vendor/bin/ks
-vendor/bin/mdm_helper
 vendor/bin/ATFWD-daemon
 vendor/bin/adpl
 vendor/bin/hw/qcrild
@@ -1622,7 +1621,6 @@ vendor/lib64/deviceInfoServiceModule.so
 vendor/lib64/libconfigdb.so
 vendor/lib64/liblqe.so
 vendor/lib64/libmdmdetect.so
-vendor/lib64/libmdmimgload.so
 vendor/lib64/libnetmgr.so
 vendor/lib64/libnetmgr_common.so
 vendor/lib64/libnetmgr_nr_fusion.so
