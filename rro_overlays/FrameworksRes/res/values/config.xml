@@ -720,9 +720,6 @@
     <!-- Average Current for bluetooth controller when transmitting. 0 by default-->
     <integer translatable="false" name="config_bluetooth_tx_cur_ma">33</integer>
 
-    <!-- Set to true to add links to Cell Broadcast app from Settings and MMS app. -->
-    <bool name="config_cellBroadcastAppLinks">true</bool>
-
     <!-- This string array should be overridden by the device to present a list of network
          attributes.  This is used by the connectivity manager to decide which networks can coexist
          based on the hardware -->
