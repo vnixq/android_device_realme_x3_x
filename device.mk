@@ -197,7 +197,6 @@ PRODUCT_PACKAGES += \
     init.oplus.rc \
     init.qcom.power.rc \
     init.qcom.early_boot.sh \
-    init.qcom.post_boot.sh \
     init.qcom.sensors.sh \
     init.oplus.sensor.rc \
     init.qcom.usb.rc \
@@ -206,6 +205,7 @@ PRODUCT_PACKAGES += \
     init.qcom.rc \
     init.qcom.sh \
     init.target.rc \
+    init.target.power.rc \
     ueventd.qcom.rc
 
 # IPA Manager
