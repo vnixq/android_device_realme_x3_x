@@ -104,7 +104,6 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.camera.postproc@1.0.vendor \
     libcamera2ndk_vendor \
     libcamera_metadata_shim \
-    libprotobuf-cpp-full \
     libgui_vendor \
     librsjni
 
@@ -373,7 +372,8 @@ PRODUCT_PACKAGES += \
 
 # Protobuf
 PRODUCT_PACKAGES += \
-    libprotobuf-cpp-lite-3.9.1-vendorcompat
+    libprotobuf-cpp-lite-3.9.1-vendorcompat \
+    libprotobuf-cpp-full-3.9.1-vendorcompat
 
 # Recovery
 PRODUCT_PACKAGES += \
