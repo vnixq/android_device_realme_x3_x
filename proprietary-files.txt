@@ -56,6 +56,9 @@ vendor/lib64/libfastrpc_utf_stub.so
 vendor/lib64/libloadalgo_stub.so
 vendor/lib64/libmdsprpc.so
 
+# Audio firmware
+odm/firmware/tfa98xx.cnt
+
 # Audio FX modules
 odm/lib/soundfx/libhaptic_effect.so
 system_ext/bin/aptxalsOverlayCreateProject.sh
@@ -74,14 +77,26 @@ vendor/lib64/soundfx/libqcvirt.so
 vendor/lib64/soundfx/libshoebox.so
 
 # Audio HAL
-odm/lib/libaudioEngineerTest.so
-odm/lib64/libaudioEngineerTest.so
-vendor/lib/hw/vendor.qti.hardware.audiohalext@1.0-impl.so
+vendor/lib/hw/audio.primary.msmnile.so
 vendor/lib/libaudio_log_utils.so
-vendor/lib/vendor.qti.hardware.audiohalext@1.0.so
-vendor/lib64/hw/vendor.qti.hardware.audiohalext@1.0-impl.so
+vendor/lib/libaudioconfigstore.so
+vendor/lib/libtinycompress.so
+vendor/lib/libexthwplugin.so
+vendor/lib/libhdmiedid.so
+vendor/lib/libhfp.so
+vendor/lib/libsndmonitor.so
+vendor/lib/libspkrprot.so
+vendor/lib64/hw/audio.primary.msmnile.so
 vendor/lib64/libaudio_log_utils.so
-vendor/lib64/vendor.qti.hardware.audiohalext@1.0.so
+vendor/lib64/libaudioconfigstore.so
+vendor/lib64/libtinycompress.so
+vendor/lib64/libcirrusspkrprot.so
+vendor/lib64/libcirrusspkrprot.so
+vendor/lib64/libexthwplugin.so
+vendor/lib64/libhdmiedid.so
+vendor/lib64/libhfp.so
+vendor/lib64/libsndmonitor.so
+vendor/lib64/libspkrprot.so
 
 # Audio KTV
 odm/lib/rfsa/adsp/libc++.so.1
@@ -96,9 +111,9 @@ odm/lib/rfsa/adsp/libktvreverb.so
 odm/lib/rfsa/adsp/libktvvolume.so
 
 # Audio extensions
-odm/etc/audio_platform_info.xml
 odm/firmware/awinic_haptic_params.bin
-vendor/etc/audio_effects.xml
+odm/lib/libaudioEngineerTest.so
+odm/lib64/libaudioEngineerTest.so
 vendor/lib/liba2dpoffload.so
 vendor/lib/libbatterylistener.so
 vendor/lib/libcomprcapture.so
@@ -138,10 +153,6 @@ vendor/etc/acdbdata/QRD/QRD_Headset_cal.acdb
 vendor/etc/acdbdata/QRD/QRD_Speaker_cal.acdb
 vendor/etc/acdbdata/QRD/QRD_workspaceFile.qwsp
 
-# Audio-configs
-odm/etc/audio_platform_info.xml
-vendor/etc/audio_effects.xml
-
 # Audio
 odm/firmware/awinic_haptic_gun_params.bin
 odm/lib/soundfx/awinic.haptic.effect.so
@@ -170,10 +181,8 @@ vendor/lib64/soundfx/libaudiopreprocessing.so
 system_ext/lib/vendor.qti.hardware.audiohalext@1.0.so
 system_ext/lib64/vendor.qti.hardware.audiohalext@1.0.so
 vendor/lib/hw/vendor.qti.hardware.audiohalext@1.0-impl.so
-vendor/lib/libaudioconfigstore.so
 vendor/lib/vendor.qti.hardware.audiohalext@1.0.so
 vendor/lib64/hw/vendor.qti.hardware.audiohalext@1.0-impl.so
-vendor/lib64/libaudioconfigstore.so
 vendor/lib64/vendor.qti.hardware.audiohalext@1.0.so
 
 # Bluetooth (A2DP)
@@ -1325,7 +1334,6 @@ vendor/lib64/libkeymasterutils.so
 vendor/lib64/libqtikeymaster4.so
 
 # Listen
-vendor/lib/hw/sound_trigger.primary.msmnile.so
 vendor/lib/libadpcmdec.so
 vendor/lib/libcapiv2svacnn.so
 vendor/lib/libcapiv2vop.so
@@ -1336,7 +1344,6 @@ vendor/lib/libgcs.so
 vendor/lib/liblistensoundmodel2.so
 vendor/lib/libmulawdec.so
 vendor/lib/libsmwrapper.so
-vendor/lib64/hw/sound_trigger.primary.msmnile.so
 vendor/lib64/libcapiv2svacnn.so
 vendor/lib64/libcapiv2vop.so
 vendor/lib64/libgcs-calwrapper.so
