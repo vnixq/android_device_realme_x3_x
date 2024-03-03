@@ -34,6 +34,9 @@ debug.cpurend.vsync=false
 # Dex2oat
 dalvik.vm.dex2oat64.enabled=true
 
+# Graphics
+debug.sf.enable_gl_backpressure=false
+
 # Logs
 persist.log.tag.OpenGLRenderer=S
 
