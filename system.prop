@@ -3,10 +3,10 @@ ro.config.media_vol_default=8
 ro.config.media_vol_steps=25
 
 # Bluetooth
-persist.vendor.bt.a2dp.aac_whitelist=false
-ro.bluetooth.library_name=libbluetooth_qti.so
+bt.max.hfpclient.connections=1
+ro.bluetooth.library_name=libbluetooth.so
 vendor.bluetooth.soc=cherokee
-persist.vendor.bt.a2dp_offload_cap=sbc-aptx-aptxhd-aac
+qcom.bluetooth.soc=cherokee
 
 # CABC
 persist.cabc_profile=1
