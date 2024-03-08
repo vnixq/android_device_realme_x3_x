@@ -337,6 +337,9 @@ PRODUCT_COPY_FILES += \
 # Vibrator
 $(call inherit-product, vendor/qcom/opensource/vibrator/vibrator-vendor-product.mk)
 
+PRODUCT_COPY_FILES += \
+     $(LOCAL_PATH)/configs/excluded-input-devices.xml:$(TARGET_COPY_OUT_VENDOR)/etc/excluded-input-devices.xml
+
 # Parts
 PRODUCT_PACKAGES += \
     RealmeParts
