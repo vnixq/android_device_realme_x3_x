@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2021 ArrowOS
+# Copyright (C) 2023 The LineageOS Project
 #
 # SPDX-License-Identifier: Apache-2.0
 #
@@ -291,14 +291,21 @@ PRODUCT_PACKAGES += \
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
-    $(LOCAL_PATH)/overlay \
     $(LOCAL_PATH)/overlay-lineage
 
-PRODUCT_PACKAGES += \
-    NoCutoutOverlay \
-    NotchBarKiller
-
 PRODUCT_ENFORCE_RRO_TARGETS := *
+PRODUCT_PACKAGES += \
+    SettingsProviderRes \
+    FrameworksRes \
+    CarrierConfigRes \
+    TetheringConfigRes \
+    LineageDialerRes \
+    TelephonyRes \
+    SettingsRes \
+    SystemUIRes \
+    NoCutoutOverlay \
+    NotchBarKillerRes \
+    WifiRes
 
 # OMX
 PRODUCT_PACKAGES += \
@@ -479,13 +486,11 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.wifi.supplicant@2.1.vendor \
     android.hardware.wifi@1.0-service \
     android.hardware.wifi@1.5.vendor \
-    TetheringConfigOverlay \
     wpa_supplicant.conf \
     libwifi-hal-ctrl \
     libwifi-hal-qcom \
     libwpa_client \
     wpa_supplicant \
-    WifiOverlay \
     hostapd \
     wpa_cli
 
