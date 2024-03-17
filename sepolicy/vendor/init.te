@@ -1,1 +1,3 @@
 allow init shell_exec:file { execute open read };
+allow init sysfs:file open;
+allow init proc:file write;
