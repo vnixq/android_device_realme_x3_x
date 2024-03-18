@@ -1029,6 +1029,7 @@ vendor/firmware/fingerprint_success_174Hz.bin
 
 # Vibrator firmware
 odm/firmware/aw8697_haptic_19081.bin:vendor/firmware/aw8697_haptic_19081.bin
+vendor/firmware/aw8697_rtp.bin
 vendor/firmware/aw8697_breath_simulation_RTP_118_166Hz.bin
 vendor/firmware/aw8697_breath_simulation_RTP_118_170Hz.bin
 vendor/firmware/aw8697_breath_simulation_RTP_118_174Hz.bin
