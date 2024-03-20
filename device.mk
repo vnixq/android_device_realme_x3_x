@@ -12,7 +12,6 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/developer_gsi_keys.mk)
 
 # Inherit updatable APEX
 OVERRIDE_PRODUCT_COMPRESSED_APEX := false
-$(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 
 PRODUCT_BROKEN_VERIFY_USES_LIBRARIES := true
 RELAX_USES_LIBRARY_CHECK := true
