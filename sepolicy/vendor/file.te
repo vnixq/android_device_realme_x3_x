@@ -35,3 +35,6 @@ type proc_decimal, fs_type, proc_type;
 
 # Cnss
 type cnss_vendor_data_file, file_type;
+
+# Cryptoeng
+type hal_cryptoeng_default_exec, exec_type, file_type;
