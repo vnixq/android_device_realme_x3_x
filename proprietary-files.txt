@@ -1734,6 +1734,12 @@ vendor/radio/qcril_database/qcril.db
 vendor/bin/ssr_setup
 vendor/bin/subsystem_ramdump
 
+# Sensor - from RMX1921
+odm/lib/oplus.sensors.ssc.so:vendor/lib/oplus.sensors.ssc.so|1cce6ca1dbf8eb073148538ef1c1f26fb0307d3e
+odm/lib64/oplus.sensors.ssc.so:vendor/lib64/oplus.sensors.ssc.so|314ad80354c658893767b07f1f98ff9383cf6cf5
+vendor/lib/sensors.ssc.so|5eafd538505bdc9c1712f8e4c30f7ce1dbd2eb1f
+vendor/lib64/sensors.ssc.so|7808cd426980171032cb06d9d810b0c4962b9a05
+
 # Sensor-calibrate
 -system_ext/framework/vendor.qti.hardware.sensorscalibrate-V1.0-java.jar
 vendor/bin/hw/vendor.qti.hardware.sensorscalibrate@1.0-service
@@ -1928,7 +1934,6 @@ vendor/lib/libsnsdiaglog.so
 vendor/lib/libssc.so
 vendor/lib/libssc_default_listener.so
 vendor/lib/sensors.hal.tof.so
-vendor/lib/sensors.ssc.so
 vendor/lib64/android.hardware.sensors@2.0-ScopedWakelock.so
 vendor/lib64/libsensorcal.so
 vendor/lib64/libsensorslog.so
@@ -1941,7 +1946,6 @@ vendor/lib64/libsnsdiaglog.so
 vendor/lib64/libssc.so
 vendor/lib64/libssc_default_listener.so
 vendor/lib64/sensors.hal.tof.so
-vendor/lib64/sensors.ssc.so
 
 # Snapdragon Computer Vision Engine
 vendor/lib/libfastcvdsp_stub.so
