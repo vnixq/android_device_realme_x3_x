@@ -39,4 +39,6 @@
     <dimen name="physical_fingerprint_sensor_center_screen_location_x">1080px</dimen>
     <dimen name="physical_fingerprint_sensor_center_screen_location_y">@dimen/physical_power_button_center_screen_location_y</dimen>
 
+    <!-- Whether long press is required to activate keyguard quick affordance buttons -->
+    <bool name="config_keyguardQuickAffordanceRequiresLongPress">false</bool>
 </resources>
