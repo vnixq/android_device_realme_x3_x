@@ -58,6 +58,9 @@ function blob_fixup() {
         vendor/lib64/hw/camera.qcom.so)
             grep -q libcamera_metadata_shim.so "${2}" || "${PATCHELF}" --add-needed libcamera_metadata_shim.so "${2}"
             ;;
+	odm/bin/hw/vendor.oplus.hardware.cryptoeng@1.0-service)
+	    patchelf --add-needed "libshim.so" "${2}"
+	    ;;
     esac
 }
 
