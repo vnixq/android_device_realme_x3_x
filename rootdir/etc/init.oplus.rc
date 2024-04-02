@@ -89,6 +89,9 @@ on boot
     # Charger
     chown system system /sys/class/power_supply/battery/mmi_charging_enable
 
+    # OTG
+    write /sys/class/power_supply/usb/otg_switch 1
+
 on property:ro.boot.prjname=*
     # Display
     setprop ro.separate.soft ${ro.boot.prjname}
