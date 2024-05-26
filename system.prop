@@ -9,9 +9,6 @@ ro.bluetooth.library_name=libbluetooth.so
 vendor.bluetooth.soc=cherokee
 qcom.bluetooth.soc=cherokee
 
-# CABC
-persist.cabc_profile=1
-
 # CNE
 persist.vendor.cne.feature=1
 

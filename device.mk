@@ -156,10 +156,6 @@ PRODUCT_PACKAGES += \
     libvulkan \
     memtrack.msmnile
 
-# Doze
-PRODUCT_PACKAGES += \
-    RealmeDoze
-
 # Fastbootd
 PRODUCT_PACKAGES += \
     fastbootd
@@ -340,11 +336,10 @@ PRODUCT_COPY_FILES += \
      $(LOCAL_PATH)/configs/excluded-input-devices.xml:$(TARGET_COPY_OUT_VENDOR)/etc/excluded-input-devices.xml
 
 # Parts
-PRODUCT_PACKAGES += \
-    RealmeParts
+$(call inherit-product, packages/apps/RealmeParts/parts.mk)
 
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/parts/init/realmeparts.rc:$(TARGET_COPY_OUT_SYSTEM)/etc/init/realmeparts.rc
+    packages/apps/RealmeParts/init/parts.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/parts.rc
 
 # QNS
 PRODUCT_PACKAGES += \
