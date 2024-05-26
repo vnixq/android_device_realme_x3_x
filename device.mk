@@ -199,6 +199,7 @@ PRODUCT_PACKAGES += \
     init.safailnet.rc \
     init.class_main.sh \
     init.oplus.rc \
+    init.qcom.power.rc \
     init.qcom.early_boot.sh \
     init.qcom.post_boot.sh \
     init.qcom.sensors.sh \
