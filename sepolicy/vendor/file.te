@@ -38,6 +38,7 @@ type cnss_vendor_data_file, file_type;
 
 # Cryptoeng
 type hal_cryptoeng_default_exec, exec_type, file_type;
+type hal_cryptoeng_hwservice, hwservice_manager_type;
 
 # ccci_mdinit
 type ccci_mdinit, domain;
