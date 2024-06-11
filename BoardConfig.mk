@@ -108,7 +108,6 @@ BOARD_KERNEL_CMDLINE := \
 	service_locator.enable=1 \
 	cgroup_disable=pressure \
 	msm_rtb.filter=0x237 \
-	androidboot.memcg=1 \
 	loop.max_part=7 \
 	pm.sleep_mode=1 \
 	swiotlb=2048 \
