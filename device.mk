@@ -48,7 +48,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     vendor.qti.hardware.bluetooth_audio@2.0.vendor \
     android.hardware.bluetooth.audio-impl \
-    android.hardware.bluetooth.audio@2.0:32 \
     android.hardware.audio.service \
     android.hardware.audio@6.0-impl:32 \
     android.hardware.audio.effect@6.0-impl:32 \
@@ -114,12 +113,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     libsuspend
 
-# ContextHub
-PRODUCT_PACKAGES += \
-    android.hardware.contexthub@1.0-impl \
-    android.hardware.contexthub@1.0-impl.generic \
-    android.hardware.contexthub@1.0-service
-
 # Configstore
 PRODUCT_PACKAGES += \
     disable_configstore
@@ -159,7 +152,6 @@ PRODUCT_PACKAGES += \
     libdisplayconfig.qti \
     libqdMetaData \
     libqdMetaData.system \
-    libtinyxml \
     libvulkan \
     memtrack.msmnile
 
@@ -189,13 +181,7 @@ PRODUCT_PACKAGES += \
 
 # HIDL
 PRODUCT_PACKAGES += \
-    android.hidl.base@1.0.vendor \
-    android.hidl.manager@1.0.vendor \
-
-PRODUCT_PACKAGES += \
-    libhidltransport \
     libhidltransport.vendor \
-    libhwbinder \
     libhwbinder.vendor
 
 # Init
@@ -222,9 +208,7 @@ PRODUCT_PACKAGES += \
 # IPA Manager
 PRODUCT_PACKAGES += \
     ipacm \
-    IPACM_cfg.xml \
-    libipanat \
-    liboffloadhal
+    IPACM_cfg.xml
 
 # Keylayout
 PRODUCT_COPY_FILES += \
@@ -418,8 +402,7 @@ PRODUCT_PACKAGES += \
     android.hardware.radio.deprecated@1.0.vendor \
     android.hardware.secure_element@1.2.vendor \
     libjson \
-    librmnetctl \
-    libxml2
+    librmnetctl
 
 # Service Tracker
 PRODUCT_PACKAGES += \

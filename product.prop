@@ -42,7 +42,6 @@ ro.incremental.enable=1
 ro.vold.umsdirtyratio=20 
 ro.ril.disable.power.collapse=0 
 power.saving.mode=1
-pm.sleep_mode=1
 
 # Phantom process monitoring
 sys.fflag.override.settings_enable_monitor_phantom_procs=false

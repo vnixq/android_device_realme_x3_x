@@ -28,7 +28,6 @@ qcom.bluetooth.soc=cherokee
 persist.vendor.cne.feature=1
 
 # Data
-ro.vendor.use_data_netmgrd=true
 persist.vendor.data.mode=concurrent
 
 # Disable vsync for cpu rendered apps
