@@ -302,7 +302,6 @@ PRODUCT_PACKAGES += \
 # OMX
 PRODUCT_PACKAGES += \
     android.hardware.media.c2@1.2.vendor \
-    android.hardware.media.omx@1.0-impl \
     android.hardware.media.omx@1.0-service \
     libavservices_minijail \
     libavservices_minijail.vendor \
