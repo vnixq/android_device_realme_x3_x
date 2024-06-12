@@ -10,6 +10,9 @@ $(call inherit-product, vendor/realme/x3/x3-vendor.mk)
 # Inherit GSI keys
 $(call inherit-product, $(SRC_TARGET_DIR)/product/developer_gsi_keys.mk)
 
+# Inherit dev keys for signing builds
+-include vendor/lineage-priv/keys/keys.mk
+
 # Inherit updatable APEX
 OVERRIDE_PRODUCT_COMPRESSED_APEX := false
 
