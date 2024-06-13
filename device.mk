@@ -103,6 +103,7 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.camera.postproc@1.0.vendor \
     libcamera2ndk_vendor \
     libcamera_metadata_shim \
+    libutilscallstack.vendor:64 \
     libgui_vendor \
     librsjni
 
@@ -173,8 +174,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     libvndfwk_detect_jni.qti.vendor \
     libqti_vndfwk_detect.vendor \
-    libvndfwk_detect_jni.qti \
-    libqti_vndfwk_detect
+    libvndfwk_detect_jni.qti
 
 # Health
 PRODUCT_PACKAGES += \
@@ -300,6 +300,7 @@ PRODUCT_PACKAGES += \
     libcodec2_hidl@1.0.vendor \
     libcodec2_vndk.vendor \
     libmm-omxcore \
+    libprocessgroup.vendor:32 \
     libminijail \
     libOmxAacEnc \
     libOmxAmrEnc \
@@ -414,9 +415,14 @@ PRODUCT_PACKAGES += \
     android.hardware.radio@1.6.vendor \
     android.hardware.radio.config@1.3.vendor \
     android.hardware.radio.deprecated@1.0.vendor \
-    android.hardware.secure_element@1.2.vendor \
+    android.hardware.secure_element@1.2.vendor
+
+PRODUCT_PACKAGES += \
     libjson \
-    librmnetctl
+    libcurl.vendor:64 \
+    librmnetctl \
+    libjsoncpp.vendor \
+    libsqlite.vendor:64
 
 # Service Tracker
 PRODUCT_PACKAGES += \
@@ -430,6 +436,7 @@ PRODUCT_SOONG_NAMESPACES += \
 PRODUCT_PACKAGES += \
     android.frameworks.sensorservice@1.0.vendor \
     android.hardware.sensors@2.1-service.multihal_x3 \
+    libdumpstateutil.vendor:64 \
     libsensorndkbridge
 
 PRODUCT_COPY_FILES += \
