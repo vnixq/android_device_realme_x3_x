@@ -118,7 +118,7 @@ BOARD_KERNEL_CMDLINE := \
 KERNEL_LD := LD=ld.lld
 TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_SOURCE := kernel/realme/x3
-TARGET_KERNEL_CONFIG := x3_defconfig vendor/debugfs.config
+TARGET_KERNEL_CONFIG := vendor/x3-perf_defconfig vendor/debugfs.config
 TARGET_KERNEL_CLANG_COMPILE := true
 TARGET_KERNEL_ADDITIONAL_FLAGS := LLVM_IAS=1 LLVM=1 LD=ld.lld AR=llvm-ar NM=llvm-nm STRIP=llvm-strip
 TARGET_KERNEL_ADDITIONAL_FLAGS += OBJCOPY=llvm-objcopy OBJDUMP=llvm-objdump READELF=llvm-readelf HOSTAR=llvm-ar HOSTLD=ld.lld
