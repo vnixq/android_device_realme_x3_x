@@ -193,6 +193,8 @@ ro.apk_verity.mode=2
 
 # USB
 vendor.usb.product_string=Realme x3
+vendor.usb.use_ffs_mtp=1
+sys.usb.mtp.batchcancel=1
 
 # Zygote
 zygote.critical_window.minute=10
