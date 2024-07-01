@@ -297,6 +297,13 @@ PRODUCT_PACKAGES += \
     libOmxCore \
     libOmxVdec \
     libOmxVenc \
+    libvpx.vendor \
+    libopus.vendor \
+    libstagefright_amrnb_common.vendor \
+    libstagefright_enc_common.vendor \
+    libstagefright_softomx_plugin.vendor \
+    libstagefright_softomx.vendor \
+    libvorbisidec.vendor \
     libOmxEvrcEnc \
     libOmxG711Enc \
     libOmxQcelp13Enc \
