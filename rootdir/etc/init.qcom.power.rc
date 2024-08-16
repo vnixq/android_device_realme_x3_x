@@ -38,24 +38,10 @@ on boot
 
 # Balanced
 on property:perf_profile=0
-    write /sys/devices/system/cpu/cpufreq/policy0/scaling_governor schedutil
-    write /sys/devices/system/cpu/cpufreq/policy4/scaling_governor schedutil
-    write /sys/devices/system/cpu/cpufreq/policy7/scaling_governor schedutil
-
-    write /sys/devices/system/cpu/cpufreq/policy0/scaling_min_freq 300000
-    write /sys/devices/system/cpu/cpufreq/policy4/scaling_min_freq 710400
-    write /sys/devices/system/cpu/cpufreq/policy7/scaling_min_freq 825600
-
-    write /sys/devices/system/cpu/cpufreq/policy0/scaling_max_freq 1785600
-    write /sys/devices/system/cpu/cpufreq/policy4/scaling_max_freq 2419200
-
-    write /sys/module/cpu_boost/parameters/input_boost_freq "0:1036800"
-    write /sys/module/cpu_boost/parameters/input_boost_ms 120
-
     write /sys/class/kgsl/kgsl-3d0/devfreq/min_freq 257000000
-    write /sys/class/kgsl/kgsl-3d0/devfreq/max_freq 675000000
-    write /sys/class/kgsl/kgsl-3d0/min_pwrlevel 7
-    write /sys/class/kgsl/kgsl-3d0/max_pwrlevel 3
+    write /sys/class/kgsl/kgsl-3d0/devfreq/max_freq 585000000
+
+    write /sys/class/kgsl/kgsl-3d0/default_pwrlevel 5
 
     write /proc/sys/kernel/sched_upmigrate "95 95"
     write /proc/sys/kernel/sched_downmigrate "85 85"
@@ -63,26 +49,17 @@ on property:perf_profile=0
     write /proc/sys/vm/swappiness 100
 
     # skin-therm
-    write /sys/class/thermal/thermal_zone73/cdev0_upper_limit 12
-    write /sys/class/thermal/thermal_zone73/cdev1_upper_limit 15
+    write /sys/class/thermal/thermal_zone72/cdev0_upper_limit 12
+    write /sys/class/thermal/thermal_zone72/cdev1_upper_limit 15
+
+    setprop vendor.display.enable_rotator_ui 0
 
 # Gaming
 on property:perf_profile=1
-    write /sys/devices/system/cpu/cpufreq/policy0/scaling_governor performance
-    write /sys/devices/system/cpu/cpufreq/policy4/scaling_governor performance
-    write /sys/devices/system/cpu/cpufreq/policy7/scaling_governor performance
-
-    write /sys/devices/system/cpu/cpufreq/policy0/scaling_min_freq 300000
-    write /sys/devices/system/cpu/cpufreq/policy4/scaling_min_freq 710400
-    write /sys/devices/system/cpu/cpufreq/policy7/scaling_min_freq 825600
-
-    write /sys/module/cpu_boost/parameters/input_boost_freq "0:1036800"
-    write /sys/module/cpu_boost/parameters/input_boost_ms 20
-
     write /sys/class/kgsl/kgsl-3d0/devfreq/min_freq 257000000
     write /sys/class/kgsl/kgsl-3d0/devfreq/max_freq 675000000
-    write /sys/class/kgsl/kgsl-3d0/min_pwrlevel 5
-    write /sys/class/kgsl/kgsl-3d0/max_pwrlevel 1
+    
+    write /sys/class/kgsl/kgsl-3d0/default_pwrlevel 1
 
     write /proc/sys/kernel/sched_upmigrate "96 88"
     write /proc/sys/kernel/sched_downmigrate "55 66"
@@ -90,40 +67,10 @@ on property:perf_profile=1
     write /proc/sys/vm/swappiness 1
 
     # skin-therm
-    write /sys/class/thermal/thermal_zone73/cdev0_upper_limit 00
-    write /sys/class/thermal/thermal_zone73/cdev1_upper_limit 00
+    write /sys/class/thermal/thermal_zone72/cdev0_upper_limit 00
+    write /sys/class/thermal/thermal_zone72/cdev1_upper_limit 00
 
-# Battery Saving
-on property:perf_profile=2
-    write /sys/devices/system/cpu/cpufreq/policy0/scaling_governor powersave
-    write /sys/devices/system/cpu/cpufreq/policy4/scaling_governor powersave
-    write /sys/devices/system/cpu/cpufreq/policy7/scaling_governor powersave
-
-    write /sys/devices/system/cpu/cpufreq/policy0/scaling_min_freq 300000
-    write /sys/devices/system/cpu/cpufreq/policy4/scaling_min_freq 710400
-    write /sys/devices/system/cpu/cpufreq/policy7/scaling_min_freq 825600
-
-    write /sys/devices/system/cpu/cpufreq/policy0/scaling_max_freq 940800
-    write /sys/devices/system/cpu/cpufreq/policy4/scaling_max_freq 1171200
-
-    write /sys/module/cpu_boost/parameters/input_boost_freq "0:1036800"
-    write /sys/module/cpu_boost/parameters/input_boost_ms 120
-
-    write /sys/class/kgsl/kgsl-3d0/devfreq/min_freq 257000000
-    write /sys/class/kgsl/kgsl-3d0/devfreq/max_freq 675000000
-    write /sys/class/kgsl/kgsl-3d0/min_pwrlevel 7
-    write /sys/class/kgsl/kgsl-3d0/max_pwrlevel 5
-
-    write /proc/sys/kernel/sched_upmigrate "95 95"
-    write /proc/sys/kernel/sched_downmigrate "85 85"
-
-    write /proc/sys/vm/swappiness 100
-
-    # skin-therm
-    write /sys/class/thermal/thermal_zone73/cdev0_upper_limit 12
-    write /sys/class/thermal/thermal_zone73/cdev1_upper_limit 15
-
-    setprop vendor.display.enable_rotator_ui 0
+    setprop vendor.display.enable_rotator_ui 1
 
 on property:init.svc.vendor.charger=running
     # Keep one LITTLE and one big
@@ -170,11 +117,3 @@ on late-fs
     write /sys/block/dm-1/queue/read_ahead_kb 128
     write /sys/block/dm-2/queue/read_ahead_kb 128
     write /sys/block/dm-3/queue/read_ahead_kb 128
-
-on post-fs-data
-
-on property:perf_profile=1
-    setprop vendor.display.enable_rotator_ui 1
-
-on property:perf_profile=0
-    setprop vendor.display.enable_rotator_ui 0
