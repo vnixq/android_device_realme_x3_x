@@ -195,7 +195,6 @@ PRODUCT_PACKAGES += \
     fstab.qcom \
     init.recovery.qcom.rc \
     init.set_baseband.sh \
-    init.safailnet.rc \
     init.class_main.sh \
     init.oplus.rc \
     init.qcom.power.rc \
