@@ -1,7 +1,12 @@
-# OPPO Hal
-attribute hal_oppo;
-attribute hal_oppo_client;
-attribute hal_oppo_server;
+# Cryptoeng
+attribute hal_cryptoeng;
+attribute hal_cryptoeng_client;
+attribute hal_cryptoeng_server;
+
+# Engsensor
+attribute hal_engsensor;
+attribute hal_engsensor_client;
+attribute hal_engsensor_server;
 
 # Dolby
 attribute hal_dms;

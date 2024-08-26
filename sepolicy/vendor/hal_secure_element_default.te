@@ -1,2 +1,2 @@
-allow hal_secure_element_default nfc_hwservice:hwservice_manager { find add };
-binder_call(hal_secure_element_default, nfc_hwservice)
+allow hal_secure_element_default oppo_ver_proc:dir search;
+allow hal_secure_element_default oppo_ver_proc:file r_file_perms;

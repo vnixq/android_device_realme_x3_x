@@ -1,5 +1,2 @@
-# Goodix device
-type goodix_device, dev_type;
-
-# Mdmreason device
-type vendor_mdmreason_device, dev_type;
+type fingerprint_device, dev_type;
+type mdmreason_device, dev_type;

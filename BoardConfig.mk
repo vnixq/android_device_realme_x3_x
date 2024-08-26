@@ -12,7 +12,6 @@ BUILD_BROKEN_CLANG_PROPERTY := true
 BUILD_BROKEN_USES_BUILD_COPY_HEADERS := true
 BUILD_BROKEN_MISSING_REQUIRED_MODULES := true
 BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
-SELINUX_IGNORE_NEVERALLOWS := true
 
 # Platform
 BOARD_USES_QCOM_HARDWARE := true
@@ -101,7 +100,6 @@ BOARD_KERNEL_CMDLINE := \
 	androidboot.init_fatal_reboot_target=recovery \
 	androidboot.usbcontroller=a600000.dwc \
 	earlycon=msm_geni_serial,0xa90000 \
-	androidboot.selinux=permissive \
 	lpm_levels.sleep_disabled=1 \
 	androidboot.hardware=qcom \
         console=ttyMSM0,115200n8 \

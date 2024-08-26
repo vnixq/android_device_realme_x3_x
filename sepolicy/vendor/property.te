@@ -1,7 +1,6 @@
-# Oppo props
-type oppo_debug_prop, vendor_property_type;
-type oppo_fingerprint_prop, vendor_property_type;
-type oppo_wlan_prop, vendor_property_type;
-
-# Dolby
-type vendor_dolby_loglevel_prop, vendor_property_type;
+vendor_internal_prop(adsprpc_prop)
+vendor_internal_prop(camera_ro_prop)
+vendor_internal_prop(cryptoeng_prop)
+vendor_internal_prop(oppo_fp_prop)
+vendor_restricted_prop(qcom_ims_prop)
+vendor_public_prop(vendor_perf_prop)
