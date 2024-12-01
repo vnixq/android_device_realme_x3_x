@@ -32,4 +32,5 @@ PRODUCT_GMS_CLIENTID_BASE := android-oppo
 
 # Build info
 PRODUCT_BUILD_PROP_OVERRIDES += \
-        BuildDesc="qssi-user 12 SKQ1.211113.001 1658765450117 release-keys"
+        BuildDesc="qssi-user 12 SKQ1.211113.001 1658765450117 release-keys" \
+        BuildFingerprint=realme/RMX2085/RMX2085L1:12/SKQ1.210216.001/Q.202209152050:user/release-keys
